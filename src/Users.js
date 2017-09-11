@@ -30,7 +30,7 @@ class Users extends AuthComponent{
     },(fail)=>{console.log(fail);})
   }
   componentDidMount(){
-    this.getUsers();
+    this.getUsers(this.getFilter());
   }
   onQueryChange = (e)=>{
     var newQuery = e.target.value;
