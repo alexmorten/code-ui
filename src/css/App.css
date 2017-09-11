@@ -17,7 +17,12 @@ body{
   color: white;
   position: relative;
 }
-
+.navbar{
+  float: left;
+  margin-left: 40px;
+  position: relative;
+  bottom: 8px;
+}
 .App-intro {
   font-size: large;
 }
@@ -26,6 +31,10 @@ body{
 }
 .link{
   color: white;
+  text-decoration: none;
+}
+.link-active{
+  border-bottom: 2px solid white;
 }
 .login{
   float: right;

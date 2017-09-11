@@ -25,6 +25,9 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
             <img src={logo} alt="logo" className="logo"/>
+            <div className="navbar">
+                <NavLink className="link" activeClassName="link-active" to="/">Profiles</NavLink>
+            </div>
             {loginLink}
           </div>
           <div className="App-body">
