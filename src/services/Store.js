@@ -1,6 +1,6 @@
 import StorageAdaptor from './StorageAdaptor';
 
-var API_URL = "https://wims-api.herokuapp.com/";
+var API_URL = "https://codeadmissiondayapi.herokuapp.com/";
 if(process.env.NODE_ENV === "development"){
    API_URL = "http://localhost:3000/";
 
