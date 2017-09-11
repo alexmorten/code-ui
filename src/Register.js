@@ -13,7 +13,7 @@ class Register extends Component{
     errors:{},
     firstname:"",
     lastname:"",
-    description:"",
+    // description:"",
     email:"",
     password:"",
     password_confirmation:"",
@@ -26,7 +26,7 @@ class Register extends Component{
       password_confirmation:this.state.password_confirmation,
       firstname:this.state.firstname,
       lastname:this.state.lastname,
-      description:this.state.description
+      // description:this.state.description
     };
     Store.registrate(details,(successBody)=>{
       this.setState({loading:false,sent:true});
@@ -55,7 +55,8 @@ class Register extends Component{
        && this.state.password_confirmation
        && this.state.firstname
        && this.state.lastname
-       && this.state.description);
+      //  && this.state.description
+     );
   }
 
   render(){
@@ -108,7 +109,7 @@ class Register extends Component{
           <h4>Create Account</h4>
           <TextField  floatingLabelText="Firstname" name="firstname" type="text" value={this.state.firstname} onChange={this.handleChange}/>
           <TextField  floatingLabelText="Lastname" name="lastname" type="text" value={this.state.lastname} onChange={this.handleChange}/>
-          <TextField  floatingLabelText="Description" multiLine={true} name="description" type="text" value={this.state.description} onChange={this.handleChange} style={{textAlign:"left"}}/>
+          {/* <TextField  floatingLabelText="Description" multiLine={true} name="description" type="text" value={this.state.description} onChange={this.handleChange} style={{textAlign:"left"}}/> */}
 
           <TextField  floatingLabelText="Email" name="email" type="email" value={this.state.email} onChange={this.handleChange}/>
 
