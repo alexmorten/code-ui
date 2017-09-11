@@ -64,7 +64,7 @@ render(){
   });
 
   return (
-      <Paper className="users-container">
+      <Paper className="users-container"  >
         <div className="users-filter-bar">
           <TextField floatingLabelText="Search" value={this.state.query} onChange={this.onQueryChange}/>
           {/* <TextField floatingLabelText="Role" value={this.state.status} onChange={this.onStatusChange}/> */}

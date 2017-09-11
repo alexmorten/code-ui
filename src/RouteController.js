@@ -4,7 +4,8 @@ import Login from './Login';
 import App from './App';
 import Register from './Register';
 import Users from './Users';
-
+import Dashboard from './Dashboard';
+import Learning from './Learning';
 class RouteController extends Component{
 render(){
   return(
@@ -14,7 +15,10 @@ render(){
           <Switch>
             <Route path="/register" component={Register}></Route>
             <Route path="/login" component={Login}></Route>
-            <Route path="/" component={Users}></Route>
+            <Route path="/profiles" component={Users}></Route>
+            <Route path="/learning" component={Learning}></Route>
+            <Route path="/" component={Dashboard}></Route>
+
           </Switch>
         </App>
       </Route>
