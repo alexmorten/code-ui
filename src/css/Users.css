@@ -1,0 +1,14 @@
+.user{
+  padding: 1px;
+  cursor: pointer;
+}
+.user:hover{
+  background-color: #98c4ff;
+}
+.users-container{
+  max-width: 500px;
+  margin: auto;
+}
+.users-filter-bar {
+  padding-bottom: 30px;
+}

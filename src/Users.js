@@ -5,11 +5,12 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import './css/Users.css';
 class User extends React.Component{
   render(){
     var user = this.props.user;
     return(
-      <div>
+      <div className={this.props.className}>
         <Divider/>
         <h3>{user.fullname}</h3>
         <p>{user.description}</p>
@@ -27,7 +28,7 @@ class Users extends AuthComponent{
   getUsers = (filter=this.getFilter())=>{
     this.query("users",filter,(users)=>{
       this.setState({users:users})
-    },(fail)=>{console.log(fail);})
+    },(fail)=>{console.log(fail);},true)
   }
   componentDidMount(){
     this.getUsers(this.getFilter());
@@ -58,18 +59,24 @@ class Users extends AuthComponent{
 render(){
   var users = this.state.users || [];
   var userItems = users.map((user)=>{
-    return <User user={user} key={user.id}/>;
+    return <User user={user} key={user.id} className="user"/>;
   });
 
   return (
-      <Paper>
-        <div>
+      <Paper className="users-container">
+        <div className="users-filter-bar">
           <TextField floatingLabelText="Search" value={this.state.query} onChange={this.onQueryChange}/>
           {/* <TextField floatingLabelText="Role" value={this.state.status} onChange={this.onStatusChange}/> */}
           <SelectField
           floatingLabelText=""
           value={this.state.status}
           onChange={this.onStatusChange}
+          className="select-field"
+          style={{
+            width:"150px",
+            position:"relative",
+            top:"25px"
+          }}
         >
           <MenuItem value={""} primaryText="Any" />
           <MenuItem value={"student"} primaryText="Student" />

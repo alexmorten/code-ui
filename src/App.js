@@ -3,6 +3,7 @@ import './css/App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {NavLink,withRouter} from 'react-router-dom';
 import Store from './services/Store';
+import logo from './appicon.jpg';
 class App extends Component {
   handleLogout = ()=>{
     Store.deauthenticate();
@@ -12,18 +13,18 @@ class App extends Component {
     }
   render() {
     var loginLink=(
-        <NavLink className="link" activeClassName="link-active login" to="/login">Login</NavLink>
+        <NavLink className="link login" activeClassName="link-active login" to="/login">Login</NavLink>
     );
     if(Store.isAuthenticated()){
       loginLink=(
-      <a className="link" onClick={this.handleLogout}>Logout</a>
+      <a className="link login" onClick={this.handleLogout}>Logout</a>
       )
     }
     return (
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
-
+            <img src={logo} alt="logo" className="logo"/>
             {loginLink}
           </div>
           <div className="App-body">
