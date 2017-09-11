@@ -24,8 +24,8 @@ class Users extends AuthComponent{
     query:"",
     status:""
   }
-  getUsers = (query=this.state.query,status=this.state.status)=>{
-    this.query("users",{query:query,status:status},(users)=>{
+  getUsers = (filter=this.getFilter())=>{
+    this.query("users",filter,(users)=>{
       this.setState({users:users})
     },(fail)=>{console.log(fail);})
   }
@@ -35,13 +35,25 @@ class Users extends AuthComponent{
   onQueryChange = (e)=>{
     var newQuery = e.target.value;
     this.setState({query:newQuery});
-    this.getUsers(newQuery,this.state.status);
+    var filter = this.getFilter(newQuery,this.state.status)
+    this.getUsers(filter);
   }
   onStatusChange = (e,i,value)=>{
     console.log(value);
     var newStatus = value;
     this.setState({status:newStatus});
-    this.getUsers(this.state.query,newStatus);
+    var filter = this.getFilter(this.state.query,newStatus);
+    this.getUsers(filter);
+  }
+  getFilter=(query=this.state.query,status=this.state.status)=>{
+    var obj={};
+    if(status){
+      obj.status = status;
+    }
+    if (query) {
+      obj.query = query;
+    }
+    return obj;
   }
 render(){
   var users = this.state.users || [];
