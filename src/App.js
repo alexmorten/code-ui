@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {NavLink,withRouter} from 'react-router-dom';
