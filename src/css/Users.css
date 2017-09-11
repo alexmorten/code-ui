@@ -1,6 +1,7 @@
 .user{
   padding: 1px;
   cursor: pointer;
+  position: relative;
 }
 .user:hover{
   background-color: #98c4ff;
@@ -11,4 +12,11 @@
 }
 .users-filter-bar {
   padding-bottom: 30px;
+}
+.user-status{
+  color: #636363;
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  right: 10px;
 }

@@ -14,6 +14,7 @@ class User extends React.Component{
         <Divider/>
         <h3>{user.fullname}</h3>
         <p>{user.description}</p>
+        <span className="user-status">{user.status}</span>
       </div>
     )
   }

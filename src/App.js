@@ -26,7 +26,7 @@ class App extends Component {
           <div className="App-header">
             <img src={logo} alt="logo" className="logo"/>
             <div className="navbar">
-                <NavLink className="link" activeClassName="link-active" to="/">Profiles</NavLink>
+                <NavLink className="link" activeClassName="link-active" to="/" exact={true}>Profiles</NavLink>
             </div>
             {loginLink}
           </div>
