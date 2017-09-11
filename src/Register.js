@@ -62,7 +62,13 @@ class Register extends Component{
   render(){
     if(this.state.sent){
       return(
-        <h3>Check your emails for the confirmation</h3>
+        <Paper style={{
+          padding:"20px",
+          maxWidth:"400px",
+          margin:"20px auto"
+        }}>
+          <h3>Check your emails for the confirmation</h3>
+        </Paper>
       );
     }
     const style={
