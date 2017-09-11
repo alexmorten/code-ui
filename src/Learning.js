@@ -1,6 +1,6 @@
 import React from 'react';
-
-class Learning extends React.Component {
+import AuthComponent from './helperComponents/AuthComponent';
+class Learning extends AuthComponent {
   render(){
     return(
       <div>

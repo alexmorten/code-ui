@@ -1,6 +1,6 @@
 import React from 'react';
-
-class Dashboard extends React.Component{
+import AuthComponent from './helperComponents/AuthComponent';
+class Dashboard extends AuthComponent{
   render(){
     return(
       <div>
