@@ -2,9 +2,10 @@
   padding: 1px;
   cursor: pointer;
   position: relative;
+  transition: all 500ms;
 }
 .user:hover{
-  background-color: #98c4ff;
+  background-color: #bad5fa;
 }
 .users-container{
   max-width: 600px;
